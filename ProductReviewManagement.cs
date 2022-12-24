@@ -24,5 +24,14 @@ namespace LINQDemo222Batch
             List<ProductReview> res = list.Where(p => p.Rating > 3 && (p.ProductId == 1 || p.ProductId == 4 || p.ProductId == 9)).ToList();
             Program.DisplayProducts(res);
         }
+        public static void CountProductIdUsingGroupBy(List<ProductReview> list)     //UC4
+        {
+            Console.WriteLine("\n Count ProductId Using GroupBy ");
+            var res = list.GroupBy(p => p.ProductId).Select(p => new { Id = p.Key, count = p.Count() }).ToList();
+            foreach (var obj in res)
+            {
+                Console.WriteLine($"ProductID:{obj.Id} Count:{obj.count}");
+            }
+        }
     }
 }

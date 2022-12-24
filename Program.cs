@@ -35,6 +35,7 @@
             DisplayProducts(list);
             ProductReviewManagement.RetrieveTop3BasedOnRating(list);        //UC2
             ProductReviewManagement.FetchDataBasedOnProductIdAndRating(list);   //UC3
+            ProductReviewManagement.CountProductIdUsingGroupBy(list);       //UC4
         }
         public static void DisplayProducts(List<ProductReview> list)
         {
