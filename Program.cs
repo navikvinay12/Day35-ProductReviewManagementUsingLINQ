@@ -14,7 +14,7 @@
                 new ProductReview() { ProductId = 10, UserId = 6, IsLike = false, Review = "bad", Rating = 31 },
                 new ProductReview() { ProductId = 5, UserId = 7, IsLike = false, Review = "bad", Rating = 32 },
                 new ProductReview() { ProductId = 3, UserId = 8, IsLike = true, Review = "good", Rating = 81 },
-                new ProductReview() { ProductId = 1, UserId = 9, IsLike = false, Review = "bad", Rating = 25 },
+                new ProductReview() { ProductId = 9, UserId = 9, IsLike = false, Review = "bad", Rating = 25 },
                 new ProductReview() { ProductId = 13, UserId = 10, IsLike = true, Review = "average", Rating = 53 },
                 new ProductReview() { ProductId = 20, UserId = 11, IsLike = true, Review = "nice", Rating = 91 },
                 new ProductReview() { ProductId = 18, UserId = 12, IsLike = false, Review = "bad", Rating = 33 },
@@ -34,6 +34,7 @@
             };
             DisplayProducts(list);
             ProductReviewManagement.RetrieveTop3BasedOnRating(list);        //UC2
+            ProductReviewManagement.FetchDataBasedOnProductIdAndRating(list);   //UC3
         }
         public static void DisplayProducts(List<ProductReview> list)
         {

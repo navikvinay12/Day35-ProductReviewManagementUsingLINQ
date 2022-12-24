@@ -18,5 +18,11 @@ namespace LINQDemo222Batch
             //var res = (from product in list orderby product.Rating descending select product).Take(3).ToList();
             //Program.DisplayProducts(res);
         }
+        public static void FetchDataBasedOnProductIdAndRating(List<ProductReview> list) //UC3
+        {
+            Console.WriteLine("\n Fetch Data Based On ProductId And Rating");
+            List<ProductReview> res = list.Where(p => p.Rating > 3 && (p.ProductId == 1 || p.ProductId == 4 || p.ProductId == 9)).ToList();
+            Program.DisplayProducts(res);
+        }
     }
 }
