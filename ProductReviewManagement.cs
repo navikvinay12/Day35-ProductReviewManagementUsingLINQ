@@ -42,5 +42,11 @@ namespace LINQDemo222Batch
                 Console.WriteLine($"ProductID:{obj.Id} Review:{obj.review}");
             }
         }
+        public static void Skip5Records(List<ProductReview> list)       //UC6
+        {
+            Console.WriteLine("\n Skip5Records Display remaining product reviews");
+            var res = list.Skip(5).ToList();
+            Program.DisplayProducts(res);
+        }
     }
 }

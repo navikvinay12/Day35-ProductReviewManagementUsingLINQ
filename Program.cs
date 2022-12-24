@@ -37,6 +37,7 @@
             ProductReviewManagement.FetchDataBasedOnProductIdAndRating(list);   //UC3
             ProductReviewManagement.CountProductIdUsingGroupBy(list);       //UC4
             ProductReviewManagement.GetProductIdAndReview(list);        //UC5
+            ProductReviewManagement.Skip5Records(list);         //UC6
         }
         public static void DisplayProducts(List<ProductReview> list)
         {
