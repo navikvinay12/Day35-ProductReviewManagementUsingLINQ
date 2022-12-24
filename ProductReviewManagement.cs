@@ -33,5 +33,14 @@ namespace LINQDemo222Batch
                 Console.WriteLine($"ProductID:{obj.Id} Count:{obj.count}");
             }
         }
+        public static void GetProductIdAndReview(List<ProductReview> list)      //UC5
+        {
+            Console.WriteLine("\n Get ProductId And Review ");
+            var res = list.Select(p => new { Id = p.ProductId, review = p.Review }).ToList();
+            foreach (var obj in res)
+            {
+                Console.WriteLine($"ProductID:{obj.Id} Review:{obj.review}");
+            }
+        }
     }
 }
