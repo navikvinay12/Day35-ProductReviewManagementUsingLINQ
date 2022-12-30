@@ -32,12 +32,14 @@
                 new ProductReview() { ProductId = 13, UserId = 24, IsLike = true, Review = "average", Rating = 51 },
                 new ProductReview() { ProductId = 22, UserId = 25, IsLike = true, Review = "nice", Rating = 93 }
             };
-            DisplayProducts(list);
-            ProductReviewManagement.RetrieveTop3BasedOnRating(list);        //UC2
-            ProductReviewManagement.FetchDataBasedOnProductIdAndRating(list);   //UC3
-            ProductReviewManagement.CountProductIdUsingGroupBy(list);       //UC4
-            ProductReviewManagement.GetProductIdAndReview(list);        //UC5 and UC7 Both are same .
-            ProductReviewManagement.Skip5Records(list);         //UC6
+            //DisplayProducts(list);
+            //ProductReviewManagement.RetrieveTop3BasedOnRating(list);        //UC2
+            //ProductReviewManagement.FetchDataBasedOnProductIdAndRating(list);   //UC3
+            //ProductReviewManagement.CountProductIdUsingGroupBy(list);       //UC4
+            //ProductReviewManagement.GetProductIdAndReview(list);        //UC5 and UC7 Both are same .
+            //ProductReviewManagement.Skip5Records(list);         //UC6
+            var table=ProductReviewManagement.AddDataTable();       //UC8- Adding new DataTable
+            ProductReviewManagement.DisplayDataTableRecords(table);     //Display() for DataTable.
         }
         public static void DisplayProducts(List<ProductReview> list)
         {
